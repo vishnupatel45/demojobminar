@@ -1,9 +1,5 @@
 import profile from '../../assets/Images/dp-dummy.png'
 import { useState } from "react";
-<<<<<<< HEAD
-import Profile from '../profile/profile';
-=======
->>>>>>> nikhil
 export function Applicantprofileapplication() {
     const [applicantdetails, setapplicatdetails] = useState({ name: "Nikhil ahirwar", DOB: "29/08/2001", Gmail: "Nikhilraj2908@gmail.com", Location: "Vidisha" })
     const [data, setdata] = useState([
@@ -47,18 +43,6 @@ export function Applicantprofileapplication() {
 
     return (
         <div>
-<<<<<<< HEAD
-             
-            <div className="row mt-2">
-                <div className="col-9 ">
-                    <div className='fw-bold fs-5 '>About</div>
-                    <div className='mt-5 ps-4 d-flex align-items-center ' >
-                        <Profile applicantdetail={applicantdetails} />
-                    </div>
-                    <button className="ms-2 mt-5 mb-5 px-4 btn btn-secondary">Applications</button>
-                    <div className="table-responsive">
-                    <table className="table table-striped table-bordered ">
-=======
             <div className="container row mt-2">
                 <div className="col-9 " style={{width:"100%"}}>
                     <div className='fw-bold fs-5 '>About</div>
@@ -95,7 +79,6 @@ export function Applicantprofileapplication() {
 
                     <div className="table-responsive">
                     <table className="table table-striped table-bordered " >
->>>>>>> nikhil
                         <thead>
                             <tr>
                                 <th>S.no</th>

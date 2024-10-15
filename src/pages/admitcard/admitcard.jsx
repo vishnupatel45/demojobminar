@@ -1,15 +1,9 @@
 import { useState } from 'react';
 import profile from '../../assets/Images/dp-dummy.png';
-<<<<<<< HEAD
-import { useParams } from 'react-router-dom';
-
-export function Admitcard() {
-=======
 import { useNavigate } from 'react-router-dom';
 
 export function Admitcard() {
   const navigate=useNavigate();
->>>>>>> nikhil
   const [admitcarddetails, setadmitcarddetails] = useState({
     name: "tonny stark",
     DOB: "29/08/1999",
@@ -17,13 +11,9 @@ export function Admitcard() {
     Location: "America"
   });
 
-<<<<<<< HEAD
-  const { param } = useParams(); 
-=======
   function btngenereteadmit(details){
     navigate(`/dashboardadmin/admitcardletter/${details.name}`)
   }
->>>>>>> nikhil
 
   return (
     <>
@@ -61,31 +51,6 @@ export function Admitcard() {
             <h5>Details of {admitcarddetails.name}</h5>
             <dl>
               <div className='d-flex my-4   bg-light'>
-<<<<<<< HEAD
-                <dt className='mx-4 pe-3'>Application No.</dt>
-                <dd>12345333322</dd>
-              </div>
-              <div className='d-flex my-4  bg-light '>
-                <dt className='mx-4'>Application status</dt>
-                <dd>Approved</dd>
-              </div>
-              <div className='d-flex my-4   bg-light '>
-                <dt className='mx-4 pe-3'>Date of applied</dt>
-                <dd>15/08/2024</dd>
-              </div>
-              <div className='d-flex my-4  bg-light '>
-                <dt className='mx-4'>Date of Interview</dt>
-                <dd><input className='form-control' type='date'></input></dd>
-              </div>
-              <div className='d-flex my-4  bg-light '>
-                <dt className='mx-4'>Time of Interview</dt>
-                <dd className='d-flex align-items-center'><input className=' form-control'></input><span className='bi bi-watch' style={{ marginLeft: "-10%" }}></span></dd>
-              </div>
-            </dl>
-          </div>
-          <div>
-            <button className='btn text-light w-100 ' style={{ backgroundColor: "#0d6efd" }}>Generate Admit card</button>
-=======
                 <dt className='mx-4 col-5'>Application No.</dt>
                 <dd>12345333322</dd>
               </div>
@@ -109,7 +74,6 @@ export function Admitcard() {
           </div>
           <div className='text-center'>
             <button className='btn text-light  py-3 ' style={{ width:"40%", backgroundColor: "#1995cc" }} onClick={()=>btngenereteadmit(admitcarddetails)}>Generate Admit card</button>
->>>>>>> nikhil
           </div>
         </div>
       </div>
