@@ -8,7 +8,11 @@ const Myapplication = () => {
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedStatus, setSelectedStatus] = useState('');
     const [selectedAdmitCard, setSelectedAdmitCard] = useState('');
+<<<<<<< HEAD
     const [selectNumber, setSelectNumber] = useState('')
+=======
+    const [interviewOutcome, setinterviewOutcome] = useState('')
+>>>>>>> nikhil
     const [realdata, setRealdata] = useState([])
     const fakeData = [
         { sno: 1, applicationNo: '110009997609', status: 'Approved', admitCard: 'NotGenerated', interviewOutcome: 'Approved', interviewDate: '27/06/24' },
@@ -22,6 +26,7 @@ const Myapplication = () => {
         { sno: 9, applicationNo: '110009997616', status: 'Approved', admitCard: 'NotGenerated', interviewOutcome: 'NA', interviewDate: '28/06/24' },
     ];
 
+<<<<<<< HEAD
     // function fetchapplicationdata(){
     //     axios.get("http:127.0.0.1:7000/candidate")
 
@@ -32,6 +37,25 @@ const Myapplication = () => {
     // },[])
 
     const filteredData = fakeData.filter((item) => {
+=======
+    async function fetchapplicationdata() {
+        try {
+            const response = await axios.get("http://127.0.0.1:7000/candidate")
+            setRealdata(response.data);
+            console.log(realdata);
+        }
+
+        catch (err) { console.log(err) };
+    }
+
+    useEffect(() => {
+        fetchapplicationdata();
+    }, [])
+
+
+
+    const filteredData = realdata.filter((item) => {
+>>>>>>> nikhil
         if (selectedDate && item.interviewDate !== selectedDate) {
             return false
         };
@@ -41,10 +65,13 @@ const Myapplication = () => {
         if (selectedAdmitCard && item.admitCard !== selectedAdmitCard) {
             return false
         };
+<<<<<<< HEAD
         if (selectNumber && item.applicationNo !== selectNumber) {
             return false;
         }
 
+=======
+>>>>>>> nikhil
         return true;
     });
 
@@ -60,7 +87,13 @@ const Myapplication = () => {
         setSelectedAdmitCard(e.target.value);
     };
 
+<<<<<<< HEAD
     const rollNoClicked = (applicationNo) => navigate(`/dashboardadmin/myapplication/${applicationNo}`);
+=======
+    const rollNoClicked = (applicationNo) => {
+        navigate(`/dashboardadmin/applicantprofile/${applicationNo}`);
+    };
+>>>>>>> nikhil
 
     return (
         <div>
@@ -100,7 +133,11 @@ const Myapplication = () => {
                             </select>
                         </button>
                         <button className="btn btn-light">
+<<<<<<< HEAD
                             <select className="form-select" value={selectedAdmitCard} onChange={handleAdmitCardChange}>
+=======
+                            <select className="form-select" value={interviewOutcome} onChange={handleAdmitCardChange}>
+>>>>>>> nikhil
                                 <option value="">Interview Outcomes</option>
                                 <option value="">Approved</option>
                                 <option value="">NotGenerated</option>
@@ -119,6 +156,7 @@ const Myapplication = () => {
                                 </tr>
                             </thead>
                             <tbody>
+<<<<<<< HEAD
                                 {filteredData.map((item, index) => (
                                     <tr key={index}>
                                         <td onClick={() => { rollNoClicked(item.no) }}>{item.sno} </td>
@@ -129,14 +167,32 @@ const Myapplication = () => {
                                     </tr>
                                 ))}
                             </tbody>
+=======
+                                {realdata.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{index + 1}</td>
+                                        <td onClick={() => rollNoClicked(item.applicationNo)} style={{ cursor: 'pointer' }}>
+                                            {item.applicationNo}
+                                        </td>
+                                        <td>{item.status ? "Approved" : "Rejected"}</td>
+                                        <td>{item.admitCard ? "Generated" : "N/A"}</td>
+                                        <td>{item.interviewOutcome ? "Approved" : "N/A"}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+
+>>>>>>> nikhil
                         </table>
                     </div>
 
                 </div>
             </div>
+<<<<<<< HEAD
             {/* <div className={`${styeladmin}`}>
                  <Applicantprofile/>
             </div> */}
+=======
+>>>>>>> nikhil
         </div>
     );
 };

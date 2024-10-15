@@ -9,7 +9,11 @@ export function Dashboardadmin() {
     <div>
       <div style={{ display: "flex" }}>
         <Adminsidebar selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
+<<<<<<< HEAD
         <div style={{width:"100%",overflow:'scroll',height:'90vh'}}>
+=======
+        <div style={{width:"100%", overflow: "scroll", height: "90vh" }}>
+>>>>>>> nikhil
           <Outlet /> 
         </div>
       </div>

@@ -1,9 +1,17 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import DashboardImage from '../../assets/Images/Dashboard.png'
 export function Adminsidebar({ selectedItem, setSelectedItem }) { 
     const navigate = useNavigate();
 
+=======
+import './adminsidebar.css'
+import DashboardImage from '../../assets/Images/Dashboard.png'
+export function Adminsidebar({ selectedItem, setSelectedItem }) { 
+    const navigate = useNavigate();
+    
+>>>>>>> nikhil
     const handleItemClick = useCallback((e) => {
         const newValue = e.target.getAttribute('value');
         if(newValue=="dashboardadmin"){
@@ -12,7 +20,10 @@ export function Adminsidebar({ selectedItem, setSelectedItem }) {
             navigate(`/dashboardadmin/${newValue}`);
         }
         setSelectedItem(newValue);
+<<<<<<< HEAD
 
+=======
+>>>>>>> nikhil
          
     }, [navigate, setSelectedItem]);
 
@@ -43,9 +54,15 @@ export function Adminsidebar({ selectedItem, setSelectedItem }) {
 
                 <h1
                     className="list-heading p-3 my-3"
+<<<<<<< HEAD
                     value="admitcard"
                     onClick={handleItemClick}
                     style={getItemStyle("admitcard")}
+=======
+                    value="admitcarddashboard"
+                    onClick={handleItemClick}
+                    style={getItemStyle("admitcarddashboard")}
+>>>>>>> nikhil
                 ><span className="bi bi-person-vcard-fill fs-4 mx-3"></span>
                     Admit Card
                 </h1>
@@ -70,9 +87,15 @@ export function Adminsidebar({ selectedItem, setSelectedItem }) {
 
                 <h1
                     className="list-heading p-3 my-3"
+<<<<<<< HEAD
                     value="confirmationletter"
                     onClick={handleItemClick}
                     style={getItemStyle("confirmationletter")}
+=======
+                    value="confirmationdashboard"
+                    onClick={handleItemClick}
+                    style={getItemStyle("confirmationdashboard")}
+>>>>>>> nikhil
                 >
                     <span className="bi bi-envelope-open-fill fs-4 mx-3"></span> Confirmation letter
                 </h1>
@@ -85,12 +108,20 @@ export function Adminsidebar({ selectedItem, setSelectedItem }) {
                 >
                     <span className="bi bi-menu-up fs-4 mx-3"></span> Enquires
                 </h1>
+<<<<<<< HEAD
 
                 <h1
                     className="list-heading p-3 my-3"
                     value="subadmin"
                     onClick={handleItemClick}
                     style={getItemStyle("subadmin")}
+=======
+                <h1
+                    className="list-heading p-3 my-3"
+                    value="addsubadmin"
+                    onClick={handleItemClick}
+                    style={getItemStyle("addsubadmin")}
+>>>>>>> nikhil
                 >
                     <span className="bi bi-people-fill fs-4 mx-3"></span> Sub Admin
                 </h1>

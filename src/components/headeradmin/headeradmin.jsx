@@ -6,7 +6,11 @@ export function Headeradmin(){
         <div className="row bg-light ps-3">
                 <div className="col-3 pe-5  d-flex justify-content-between align-items-center" >
                     <div className='ps-2'>
+<<<<<<< HEAD
                         <i class="bi bi-list  fs-4 "></i>
+=======
+                        <i className="bi bi-list  fs-4 "></i>
+>>>>>>> nikhil
                     </div>
                     <img
                         src={logoImage}
